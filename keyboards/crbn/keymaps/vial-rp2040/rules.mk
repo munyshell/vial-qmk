@@ -1,3 +1,6 @@
+# RP2040-specific options
+BOARD = GENERIC_RP_RP2040
+
 VIA_ENABLE = yes
 VIAL_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
