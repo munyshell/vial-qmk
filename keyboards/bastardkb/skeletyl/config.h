@@ -1,4 +1,5 @@
 /*
+ * Copyright 2021 Quentin LEBASTARD <qlebastard@gmail.com>
  * Copyright 2022 Charly Delay <charly@codesink.dev> (@0xcharly)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -17,22 +18,13 @@
 
 #pragma once
 
-/* Handedness. */
-#define MASTER_RIGHT
-
-// To use the handedness pin, resistors need to be installed on the adapter PCB.
-// If so, uncomment the following code, and undefine MASTER_RIGHT above.
-// #define A0 PAL_LINE(GPIOA, 0)
-// #define SPLIT_HAND_PIN A0
-// #define SPLIT_HAND_PIN_LOW_IS_LEFT  // High -> right, Low -> left.
-
-/* RGB settings. */
-#define WS2812_PWM_DRIVER PWMD2
-#define WS2812_PWM_CHANNEL 4
-#define WS2812_PWM_PAL_MODE 1
-#define WS2812_DMA_STREAM STM32_DMA1_STREAM7
-#define WS2812_DMA_CHANNEL 3
-
-/* CRC. */
-#define CRC8_USE_TABLE
-#define CRC8_OPTIMIZE_SPEED
+/* RGB matrix support. */
+#ifdef RGB_MATRIX_ENABLE
+#    define SPLIT_TRANSPORT_MIRROR
+#    define RGB_MATRIX_LED_COUNT 36
+#    define RGB_MATRIX_SPLIT { 18, 18 }
+#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 50
+#    define RGB_MATRIX_DEFAULT_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
+#    define RGB_DISABLE_WHEN_USB_SUSPENDED
+#    define RGB_MATRIX_KEYPRESSES
+#endif
