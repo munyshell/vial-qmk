@@ -1,0 +1,11 @@
+{
+    "keyboard_name": "lechiffrefr",
+    "manufacturer": "devops",
+    "url":"",
+    "maintainer": "cmg",
+    "usb": {
+        "vid": "0x0110",
+        "pid": "0x0110",
+        "device_version": "0.0.1"
+    }
+}
