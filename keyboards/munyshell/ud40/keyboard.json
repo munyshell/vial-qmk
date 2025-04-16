@@ -12,6 +12,8 @@
     "lto": true
   },
   "features": {
+    "tap_dance": true,
+    "combos": true,
     "bootmagic": true,
     "mousekey": true,
     "extrakey": true,
