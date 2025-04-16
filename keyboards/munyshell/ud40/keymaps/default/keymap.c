@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO,    KC_NO,       KC_BSPC,       LT(3, KC_ENTER),        KC_NO,                  KC_NO,                  KC_NO,                  KC_NO),
 
 [ADJ] = LAYOUT_staggered(
-  QK_BOOT,  KC_NO,       KC_NO,         KC_NO,                  KC_NO,                  KC_MUTE,                KC_NO,                  KC_NO,              KC_NO,          KC_NO,      KC_NO,                KC_NO,
+  QK_BOOT,  UG_TOGG,     KC_NO,         KC_NO,                  KC_NO,                  KC_MUTE,                KC_NO,                  KC_NO,              KC_NO,          KC_NO,      KC_NO,                KC_NO,
   KC_NO,    KC_NO,       KC_NO,         KC_NO,                  C(G(KC_LEFT)),          KC_VOLU,                KC_NO,                  C(G(KC_RIGHT)),     KC_NO,          KC_NO,      KC_NO,
   KC_NO,    LGUI(KC_L),  KC_NO,         KC_NO,                  C(G(KC_PGDN)),          KC_VOLD,                KC_NO,                  C(G(KC_PGUP)),      KC_NO,          KC_NO,      KC_NO,
   KC_NO,    KC_NO,       KC_NO,         KC_NO,                  KC_NO,                  KC_NO,                  KC_NO,                  KC_NO),
