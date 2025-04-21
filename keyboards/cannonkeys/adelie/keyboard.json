@@ -30,6 +30,8 @@
         "pin": "F0"
     },
     "features": {
+        "tap_dance": true,
+        "combos": true,
         "bootmagic": true,
         "command": false,
         "console": false,
